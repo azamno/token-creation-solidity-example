@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View</title>
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <div class="container mt-4">
+    <div class="row" style="margin-bottom: -70px;">
+      <div class="container button-small">
+        <div class="row mb-7">
+          <div class="main">
+            <div class="up d-flex justify-content-center">
+              <button class="custom-button" id="connect-wallet-button">
+                <p class="mb-0 fs-2" id="metamask-wallet" style="font-size: 1rem;">Connect Wallet</p>
+              </button>
+            </div>
+            <div class="down d-flex justify-content-center ">
+              <button class="create-token-button" id="create-token-page">
+                <p class="mb-0 mt-47 fs-2 ">Create</p>
+              </button>
+              <button class="view-tokens-button active">
+                <p class="mb-0 mt-47 fs-2">View</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="container">
+      <div class="row justify-content-center">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col" class="col-2 text-start">#</th>
+              <th scope="col" class="col-2 text-start">Name</th>
+              <th scope="col" class="col-2">TotalSupply</th>
+              <th scope="col" class="col-1">Decimals</th>
+              <th scope="col" class="col-6">Contract Address</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="./node_modules/web3/dist/web3.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

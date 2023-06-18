@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Token Creation Platform</title>
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <svg id="shape2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#a2d9ff" fill-opacity="1"
+        d="M0,256L120,229.3C240,203,480,149,720,144C960,139,1200,181,1320,202.7L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+      </path>
+    </svg>
+    <svg id="shape1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#a2d9ff" fill-opacity="1"
+        d="M0,0L12,32C24,64,48,128,72,128C96,128,120,64,144,48C168,32,192,64,216,90.7C240,117,264,139,288,154.7C312,171,336,181,360,181.3C384,181,408,171,432,154.7C456,139,480,117,504,117.3C528,117,552,139,576,138.7C600,139,624,117,648,138.7C672,160,696,224,720,250.7C744,277,768,267,792,234.7C816,203,840,149,864,160C888,171,912,245,936,272C960,299,984,277,1008,266.7C1032,256,1056,256,1080,218.7C1104,181,1128,107,1152,80C1176,53,1200,75,1224,80C1248,85,1272,75,1296,74.7C1320,75,1344,85,1368,74.7C1392,64,1416,32,1428,16L1440,0L1440,320L1428,320C1416,320,1392,320,1368,320C1344,320,1320,320,1296,320C1272,320,1248,320,1224,320C1200,320,1176,320,1152,320C1128,320,1104,320,1080,320C1056,320,1032,320,1008,320C984,320,960,320,936,320C912,320,888,320,864,320C840,320,816,320,792,320C768,320,744,320,720,320C696,320,672,320,648,320C624,320,600,320,576,320C552,320,528,320,504,320C480,320,456,320,432,320C408,320,384,320,360,320C336,320,312,320,288,320C264,320,240,320,216,320C192,320,168,320,144,320C120,320,96,320,72,320C48,320,24,320,12,320L0,320Z">
+      </path>
+    </svg>
+    <svg id="shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#f8fafd" fill-opacity="1"
+        d="M0,96L24,112C48,128,96,160,144,160C192,160,240,128,288,106.7C336,85,384,75,432,80C480,85,528,107,576,149.3C624,192,672,256,720,256C768,256,816,192,864,160C912,128,960,128,1008,149.3C1056,171,1104,213,1152,229.3C1200,245,1248,235,1296,213.3C1344,192,1392,160,1416,144L1440,128L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z">
+      </path>
+    </svg>
+    <h2 data-text="&nbsp;Token Creation Platform&nbsp;">&nbsp;Token Creation Platform&nbsp;</h2>
+  </header>
+  <!-- end header -->
+  <!-- main -->
+  <main>
+    <div class="container">
+      <div class="row mb-7">
+        <div class="main mt-7">
+          <div class="up d-flex justify-content-center">
+            <button class="custom-button" id="connect-wallet-button">
+              <p class="mb-0 fs-2" id="metamask-wallet">Connect Wallet</p>
+            </button>
+          </div>
+          <div class="down d-flex justify-content-center">
+            <button class="create-token-button" id="create-token-page">
+              <p class="mb-0 mt-47 fs-4">Create</p>
+            </button>
+            <button class="view-tokens-button" id="view-tokens-page">
+              <p class="mb-0 mt-47 fs-2">View</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- end main -->
+  <!-- footer -->
+  <footer>
+
+  </footer>
+  <!-- ebd footer -->
+  <!-- Metamask installation modal  -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="modal " tabindex="-1" id="install-metamask-modal">
+          <div class="modal-dialog d-flex justify-content-center align-items-center">
+            <div class="modal-content ">
+              <div class="modal-header">
+                <i class="bi bi-exclamation-triangle-fill fs-1 me-2 text-warning"></i>
+                <h5 class="modal-title "> Message</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p> Metamask not detected.Please install Metamask Extenssion from
+                  <a href='https://metamask.io'>here</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ebd Metamask installation modal -->
+  <!-- Modal connection to Metamask  -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="modal " tabindex="-1" id="connect-metamask-modal">
+          <div class="modal-dialog d-flex justify-content-center align-items-center">
+            <div class="modal-content ">
+              <div class="modal-header">
+                <i class="bi bi-exclamation-triangle-fill fs-1 me-2 text-warning"></i>
+                <h5 class="modal-title "> Message</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Connect to Metamask wallet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ebd Modal connection to Metamask -->
+  <script src="./node_modules/web3/dist/web3.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

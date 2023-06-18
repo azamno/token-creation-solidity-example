@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create</title>
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="container button-small">
+        <div class="row mb-7">
+          <div class="main">
+            <div class="up d-flex justify-content-center">
+              <button class="custom-button " id="connect-wallet-button">
+                <p class="mb-0 fs-2" id="metamask-wallet">Connect Wallet</p>
+              </button>
+            </div>
+            <div class="down d-flex justify-content-center ">
+              <button class="create-token-button active" id="#">
+                <p class="mb-0 mt-47 fs-2 ">Create</p>
+              </button>
+              <button class="view-tokens-button" id="view-tokens-page">
+                <p class="mb-0 mt-47 fs-2">View</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin-top: -90px;">
+    <div class="row mb-md-4">
+      <div class="col-md-6 col-12 mb-sm-0 mb-3">
+        <div class="row align-items-center mb-sm-3">
+          <div class="col-md-3 col-3 mb-md-0">
+            <label for="tokenNameInput" class="form-label mb-0">Name :</label>
+          </div>
+          <div class="col-md-9 col-9 w-75 ps-0">
+            <input type="text" class="form-control custom-input-1 px-4" id="tokenNameInput">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-12 mb-sm-0 mb-3">
+        <div class="row align-items-center mb-sm-3">
+          <div class="col-md-3 col-3 mb-md-0 ps-md-3">
+            <label for="tokenSymbolInput">Symbol :</label>
+          </div>
+          <div class="col-md-9 col-9 w-75 ps-0">
+            <input type="text" class="form-control custom-input-1 px-4" id="tokenSymbolInput">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-12 mb-sm-0 mb-3">
+        <div class="row align-items-center mb-sm-3">
+          <div class="col-md-3 col-3 mb-md-0">
+            <label for="totalTokensInput">TotalSupply :</label>
+            </label>
+          </div>
+          <div class="col-md-9 col-9 w-75 ps-0">
+            <input type="text" min="0" class="form-control custom-input-2 px-4" id="totalTokensInput">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-12 mb-sm-0 mb-3">
+        <div class="row align-items-center mb-sm-3">
+          <div class="col-md-3 col-3 mb-md-0 ps-md-3">
+            <label for="tokenDecimalsInput">Decimals :</label>
+          </div>
+          <div class="col-md-9 col-9 w-75 ps-0">
+            <input type="number" min="0" class="form-control custom-input-2 px-4" id="tokenDecimalsInput">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- <div class="col-md-6 col-12 mb-sm-0 mb-3">
+        <div class="row align-items-center mb-sm-3">
+          <div class="mb-3 container-file mt-3 w-75 ms-3">
+            <input class="form-control" type="file" id="formFile">
+          </div>
+        </div>
+      </div> -->
+      <div class="container button-small">
+        <div class="row mb-7">
+          <div class="main">
+            <div class="up d-flex justify-content-center">
+              <button class="custom-button me-5" id="tokenCreationButton">
+                <p class="mb-0 fs-2" id="metamask-wallet">Token Creation</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./node_modules/web3/dist/web3.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
