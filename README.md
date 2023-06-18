@@ -44,3 +44,8 @@ npm install web3
    - Refresh the website to trigger the LocalStorage clearance and image storage process.
    - After the necessary changes are made, comment out the line localStorage.clear(); again by adding the comment characters (//) in front of it.
    - Save the changes made to the "utilities.js" file.
+  ## Images
+  ![1](https://github.com/azamno/token-creation-solidity-example/assets/90998399/6ed79155-8a29-43be-944e-eac5bc7b90b8)
+![2](https://github.com/azamno/token-creation-solidity-example/assets/90998399/10e18d12-76a7-4530-a902-ad1da28bda94)
+![3](https://github.com/azamno/token-creation-solidity-example/assets/90998399/5fa1ed8c-3efd-4444-8beb-68ad8c1a97b3)
+![4](https://github.com/azamno/token-creation-solidity-example/assets/90998399/25b3546c-3e15-4ecb-ab85-cdbd9f0e5eb6)
