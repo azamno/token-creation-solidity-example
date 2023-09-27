@@ -7,29 +7,32 @@ import "./IERC20Metadata.sol";
 import "./Context.sol";
 
 /**
- * @dev Implementation of the ERC20Token contract.
+ * @notice Implementation of the ERC20Token contract.
  * Inherits from Context, IERC20, and IERC20Metadata.
  */
 
 contract ERC20Token is Context, IERC20, IERC20Metadata {
-    /**
-     * @dev Maps an address to the balance of tokens in the account.
-     * @dev Maps an address to a mapping of addresses to the amount of transferable tokens.
-     * @dev Total supply of tokens in the system.
-     * @dev Number of decimals used for the tokens.
-     * @dev Name of the token.
-     * @dev Symbol of the token.
-     */
+
+    /// @notice Maps an address to the balance of tokens in the account.
     mapping(address => uint256) public _balances;
+
+    /// @notice Maps an address to a mapping of addresses to the amount of transferable tokens.
     mapping(address => mapping(address => uint256)) private _allowances;
 
+    /// @notice Total supply of tokens in the system.
     uint256 public _totalSupply;
+
+    /// @notice Number of decimals used for the tokens.
     uint8 public _decimals;
+
+    /// @notice Name of the token.
     string public _name;
+
+    /// @notice Symbol of the token.
     string public _symbol;
 
     /**
-     * @dev Constructs a new ERC20Token instance.
+     * @notice Constructs a new ERC20Token instance.
      * @param name_ The name of the token.
      * @param symbol_ The symbol of the token.
      * @param decimals_ The number of decimals used for the token.
@@ -51,7 +54,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Retrieves the value of the name variable.
+     * @notice Retrieves the value of the name variable.
      * @return The value of the _name variable as a string.
      */
     function name() public view override returns (string memory) {
@@ -59,7 +62,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Returns the symbol of the token.
+     * @notice Returns the symbol of the token.
      * @return The symbol of the token as a string.
      */
     function symbol() public view override returns (string memory) {
@@ -67,7 +70,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Returns the number of decimals used for the token.
+     * @notice Returns the number of decimals used for the token.
      * @return The number of decimals as a uint8.
      */
     function decimals() public view override returns (uint8) {
@@ -75,7 +78,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Returns the total supply of tokens.
+     * @notice Returns the total supply of tokens.
      * @return The total supply of tokens as a uint256.
      */
     function totalSupply() public view override returns (uint256) {
@@ -83,7 +86,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Returns the balance of tokens for a specific account.
+     * @notice Returns the balance of tokens for a specific account.
      * @param account The address of the account to check the balance for.
      * @return The balance of tokens for the specified account as a uint256.
      */
@@ -92,7 +95,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Transfers a specified amount of tokens from the caller's account to the recipient's account.
+     * @notice Transfers a specified amount of tokens from the caller's account to the recipient's account.
      * @param to The address of the recipient.
      * @param amount The amount of tokens to transfer.
      * @return A boolean value indicating whether the transfer was successful.
@@ -108,7 +111,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Returns the allowance for a spender from an owner's account.
+     * @notice Returns the allowance for a spender from an owner's account.
      * @param owner The address of the owner.
      * @param spender The address of the spender.
      * @return The allowance amount as a uint256.
@@ -123,7 +126,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Approves the specified amount of tokens to be spent by a spender.
+     * @notice Approves the specified amount of tokens to be spent by a spender.
      * @param spender The address of the spender.
      * @param amount The amount of tokens to be approved.
      * @return A boolean value indicating whether the approval was successful.
@@ -139,7 +142,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Transfers the specified amount of tokens from the `from` address to the `to` address.
+     * @notice Transfers the specified amount of tokens from the `from` address to the `to` address.
      * The caller must have an allowance for `from`'s tokens.
      * @param from The address from which the tokens are transferred.
      * @param to The address to which the tokens are transferred.
@@ -158,7 +161,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Increases the allowance for a spender by the specified added value.
+     * @notice Increases the allowance for a spender by the specified added value.
      * This allows the spender to spend more tokens on behalf of the owner.
      * @param spender The address of the spender.
      * @param addedValue The amount by which to increase the allowance.
@@ -175,7 +178,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Decreases the allowance for a spender by the specified subtracted value.
+     * @notice Decreases the allowance for a spender by the specified subtracted value.
      * This reduces the spender's ability to spend tokens on behalf of the owner.
      * @param spender The address of the spender.
      * @param subtractedValue The amount by which to decrease the allowance.
@@ -200,7 +203,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Internal function that transfers a specified amount of tokens from one address to another.
+     * @notice Internal function that transfers a specified amount of tokens from one address to another.
      * @param from The address from which tokens are transferred.
      * @param to The address to which tokens are transferred.
      * @param amount The amount of tokens to transfer.
@@ -216,7 +219,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Internal function that updates the token balances and total supply after a transfer.
+     * @notice Internal function that updates the token balances and total supply after a transfer.
      * @param from The address from which tokens are transferred.
      * @param to The address to which tokens are transferred.
      * @param amount The amount of tokens being transferred.
@@ -235,14 +238,14 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
                 "ERC20: transfer amount exceeds balance"
             );
             unchecked {
-                // Overflow not possible: amount <= fromBalance <= totalSupply.
+                // Underflow not possible: amount <= fromBalance <= totalSupply.
                 _balances[from] = fromBalance - amount;
             }
         }
 
         if (to == address(0)) {
             unchecked {
-                // Overflow not possible: amount <= totalSupply or amount <= fromBalance <= totalSupply.
+                // Underflow not possible: amount <= totalSupply or amount <= fromBalance <= totalSupply.
                 _totalSupply -= amount;
             }
         } else {
@@ -256,7 +259,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Internal function that mints a specified amount of tokens and assigns them to an account.
+     * @notice Internal function that mints a specified amount of tokens and assigns them to an account.
      * @param account The address to which tokens are minted and assigned.
      * @param amount The amount of tokens to mint and assign.
      */
@@ -266,7 +269,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Internal function that burns a specified amount of tokens from an account.
+     * @notice Internal function that burns a specified amount of tokens from an account.
      * @param account The address from which tokens are burned.
      * @param amount The amount of tokens to burn.
      */
@@ -276,7 +279,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Internal function that approves a specified amount of tokens to be spent by a spender on behalf of an owner.
+     * @notice Internal function that approves a specified amount of tokens to be spent by a spender on behalf of an owner.
      * @param owner The address that owns the tokens.
      * @param spender The address that is approved to spend the tokens.
      * @param amount The amount of tokens to be approved.
@@ -294,7 +297,7 @@ contract ERC20Token is Context, IERC20, IERC20Metadata {
     }
 
     /**
-     * @dev Internal function that spends a specified amount of tokens from the allowance of an owner by a spender.
+     * @notice Internal function that spends a specified amount of tokens from the allowance of an owner by a spender.
      * @param owner The address that owns the tokens.
      * @param spender The address that spends the tokens.
      * @param amount The amount of tokens to spend.
