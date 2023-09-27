@@ -5,7 +5,8 @@ import "./Token.sol";
 
 /**
  * @title TokenFactory
- * @dev A contract for deploying and interacting with ERC20Token contracts.
+ * @author Azam Nozari
+ * @notice A contract for deploying and interacting with ERC20Token contracts.
  */
 
 contract TokenFactory {
@@ -13,7 +14,7 @@ contract TokenFactory {
     event NewContract(address indexed newContractAddress);
 
     /**
-     * @dev Deploys a new ERC20Token contract with the specified parameters.
+     * @notice Deploys a new ERC20Token contract with the specified parameters.
      * @param name_ The name of the token.
      * @param symbol_ The symbol of the token.
      * @param decimals_ The number of decimals for the token.
@@ -37,7 +38,7 @@ contract TokenFactory {
     }
 
     /**
-     * @dev Retrieves the name, symbol, decimals, and total supply of a deployed ERC20Token contract.
+     * @notice Retrieves the name, symbol, decimals, and total supply of a deployed ERC20Token contract.
      * @param contractAddress The address of the ERC20Token contract.
      * @return The name, symbol, decimals, and total supply of the ERC20Token contract.
      */
@@ -60,7 +61,7 @@ contract TokenFactory {
     }
 
     /**
-     * @dev Retrieves the ERC20Token contract at the specified index in the contractAddresses array.
+     * @notice Retrieves the ERC20Token contract at the specified index in the contractAddresses array.
      * @param id The index of the contract in the contractAddresses array.
      * @return The ERC20Token contract at the specified index.
      */
@@ -69,7 +70,7 @@ contract TokenFactory {
     }
 
     /**
-     * @dev Retrieves the length of the contractAddresses array.
+     * @notice Retrieves the length of the contractAddresses array.
      * @return The length of the contractAddresses array.
      */
     function getLengthContractAddresses() external view returns (uint256) {
